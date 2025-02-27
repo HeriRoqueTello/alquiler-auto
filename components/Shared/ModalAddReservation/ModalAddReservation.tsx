@@ -40,7 +40,7 @@ export function ModalAddReservation(props: ModalAddReservationProps) {
 
     window.location = response.data.url;
     toast({
-      title: "Car reserved ✌🏽",
+      title: "Auto Reservado ✌🏽",
     });
   };
 
