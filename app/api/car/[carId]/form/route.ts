@@ -18,7 +18,6 @@ export async function PATCH(
     const car = await db.car.update({
       where: {
         id: carId,
-        userId,
       },
       data: {
         ...values,
