@@ -17,10 +17,10 @@ export function ButtonEditCar(props: ButtonEditCarProps) {
   const [openDialog, setOpenDialog] = useState(false);
 
   return (
-    <Dialog open={openDialog}>
+    <Dialog open={openDialog} onOpenChange={setOpenDialog}>
       <DialogTrigger asChild>
         <Button variant="outline" onClick={() => setOpenDialog(true)}>
-          Edit
+          Editar
           <Pencil className="w-4 h-4 ml-2" />
         </Button>
       </DialogTrigger>
