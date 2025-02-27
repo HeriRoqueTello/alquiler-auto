@@ -1,27 +1,27 @@
 export const categoryOurFleet = [
   {
     name: "Premium",
-    active: false,
+    active: true,
   },
   {
     name: "Coupe",
-    active: true,
+    active: false,
   },
   {
     name: "Sportcar",
-    active: false,
-  },
-  {
-    name: "Hypercar",
-    active: false,
-  },
-  {
-    name: "Limusines",
     active: true,
   },
   {
-    name: "Classic",
+    name: "Hypercar",
+    active: true,
+  },
+  {
+    name: "Limusines",
     active: false,
+  },
+  {
+    name: "Classic",
+    active: true,
   },
 ];
 

@@ -9,13 +9,15 @@ export function DriveToday() {
       <div className="bg-[url('/images/background-2.jpg')] bg-center bg-no-repeat bg-cover rounded-xl p-6 lg:p-32 relative">
         <div className="lg:flex gap-x-6 ">
           <div>
-            <h3 className="text-4xl text-white">Drive your dream car Today</h3>
+            <h3 className="text-4xl text-white">
+              Conduce el coche de tus sueños HOY MISMO
+            </h3>
             <p className="text-white text-xl my-5">
-              Register and epxlore the world of premium cars
+              Regístrate y explora el mundo de los coches premium
             </p>
             <Link href="/sign-in">
               <Button variant="outline" size="lg">
-                Register here
+                Registrate Aquí
               </Button>
             </Link>
           </div>
