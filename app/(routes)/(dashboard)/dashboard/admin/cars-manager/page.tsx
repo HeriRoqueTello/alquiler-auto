@@ -13,9 +13,6 @@ export default async function CarsManagerPage() {
   }
 
   const car = await db.car.findMany({
-    where: {
-      userId,
-    },
     orderBy: {
       createdAt: "desc",
     },
@@ -24,7 +21,7 @@ export default async function CarsManagerPage() {
   return (
     <div>
       <div className="flex justify-between">
-        <h2 className="text-2xl font-bold">Manage your cars</h2>
+        <h2 className="text-2xl font-bold">Gestiona los autos</h2>
         <ButtonAddCar />
       </div>
       <ListCars cars={car} />
