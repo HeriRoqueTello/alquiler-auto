@@ -29,10 +29,12 @@ import { useState } from "react";
 import { FormAddCarProps } from "./FormAddCar.types";
 import { toast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export function FormAddCar(props: FormAddCarProps) {
   const { setOpenDialog } = props;
   const [photoUploaded, setPhotoUploaded] = useState(false);
+  const [imageURL, setImageURL] = useState("");
   const router = useRouter();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -209,7 +211,13 @@ export function FormAddCar(props: FormAddCarProps) {
                 <FormLabel>Imagen del auto</FormLabel>
                 <FormControl>
                   {photoUploaded ? (
-                    <p className="text-sm">Imagen subida!</p>
+                    // <p className="text-sm">Imagen subida!</p>
+                    <Image
+                      src={imageURL}
+                      width={200}
+                      height={200}
+                      alt={"Imagen del auto"}
+                    />
                   ) : (
                     <UploadButton
                       className="rounded-lg bg-slate-600/20 text-slate-800 outline-dotted outline-3"
@@ -217,6 +225,7 @@ export function FormAddCar(props: FormAddCarProps) {
                       endpoint="photo"
                       onClientUploadComplete={(res) => {
                         form.setValue("photo", res?.[0].url);
+                        setImageURL(res?.[0].url);
                         setPhotoUploaded(true);
                       }}
                       onUploadError={(error: Error) => {
