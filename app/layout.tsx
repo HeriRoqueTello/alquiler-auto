@@ -8,8 +8,9 @@ import { Toaster } from "@/components/ui/toaster";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Admin TarreCars",
-  description: "Course rental cars by TarreDev",
+  title: "PeruCars - Alquiler de autos en todo el Perú",
+  description:
+    "Alquiler de autos en todo el Perú, encuentra el auto que necesitas para tu viaje, con los mejores precios y la mejor calidad.",
 };
 
 export default function RootLayout({
