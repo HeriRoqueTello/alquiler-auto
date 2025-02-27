@@ -67,10 +67,10 @@ export function FilterCars(props: FiltersCarsProps) {
         <SelectContent>
           <SelectGroup>
             <SelectLabel>Tipo de motor</SelectLabel>
-            <SelectItem value="gasoil">Gasoil</SelectItem>
+            <SelectItem value="gasoil">Gasolina</SelectItem>
             <SelectItem value="diesel">Diesel</SelectItem>
             <SelectItem value="electric">Eléctrico</SelectItem>
-            <SelectItem value="hybrid">Híbbrido</SelectItem>
+            <SelectItem value="hybrid">Híbrido</SelectItem>
           </SelectGroup>
         </SelectContent>
       </Select>
@@ -94,7 +94,7 @@ export function FilterCars(props: FiltersCarsProps) {
       </Select>
 
       <Button onClick={clearFilters}>
-        Remove filters <Trash className="w-4 h-4 ml-2" />
+        Limpiar Filtros <Trash className="w-4 h-4 ml-2" />
       </Button>
     </div>
   );
