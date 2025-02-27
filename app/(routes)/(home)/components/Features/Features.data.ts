@@ -8,7 +8,7 @@ import {
 export const dataFeatures = [
   {
     icon: Hourglass,
-    text: "Entrega de coche en 24 horas",
+    text: "Entrega en 24 horas",
     bg: "bg-slate-100",
     delay: 1,
   },
