@@ -4,6 +4,8 @@ import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "@/components/ui/toaster";
+// fr-FR locale is imported as frFR
+import { esES } from "@clerk/localizations";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -19,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider localization={esES}>
       <html lang="en">
         <body className={outfit.className}>
           <NextTopLoader color="#000" />
